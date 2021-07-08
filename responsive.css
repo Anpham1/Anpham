@@ -1,0 +1,21 @@
+@media(min-width: 1113px) {
+    .header {
+        height: var(--header__height);
+
+    }
+    .header__search {
+        margin-left: 0;
+    }
+    .header__with-search,
+    .header__logo,
+    .search__select,
+    .navbar {
+        display: flex;
+    }
+    .select__option-item,
+    .filter,
+    .filter-price,
+    .filter-option {
+        display: flex;
+    }
+}
