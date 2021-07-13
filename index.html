@@ -407,6 +407,9 @@
                                 </ul>
                             </div>
                         </div>
+                        <div id="json" class="col l-2-4">
+
+                        </div>
                     </div>
                 </div>
             </footer>
@@ -451,6 +454,13 @@
         </div>
     </div>
 <script>
+    fetch ('./data.json')
+    .then (response => response.json();)
+    .then (json => { var htmls = json.map(res => return `<h4> ${res.name} </h4>
+                                                  <p> ${res.body} </p>`);})
+    var html = htmls.join('');
+    document.querySelector('#json').innerHTML = html;
+
     var inName = document.querySelector('.name');
     var msName = inName.parentElement.querySelector('.form-messages');
     inName.onblur = function() {
